@@ -14,7 +14,13 @@ export default function TodoList(props) {
     return (
         <div className="container">
             <div className="row">
-                <div className="todolist">
+                <div className="todolist leftlist">
+                    <Header {...{addNew, mode, query, setSearchQuery}}/>
+                    <FilteredList {...{items, changeStatus}}/>
+                    <Footer {...{activeItemCount, filter, changeFilter, mode, changeMode}}/>
+                    <Info {...{mode}}/>
+                </div>
+                <div className="todolist rightlist">
                     <Header {...{addNew, mode, query, setSearchQuery}}/>
                     <FilteredList {...{items, changeStatus}}/>
                     <Footer {...{activeItemCount, filter, changeFilter, mode, changeMode}}/>
